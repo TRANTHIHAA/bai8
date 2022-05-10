@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>kiem tra nam nhuan</title>
+</head>
+<body>
+<script>
+    let year =parseInt(prompt("enter a year"));
+    let lanamnhuan = false;
+    let namChiaCho4 = year % 4 == 0;
+    if(namChiaCho4) {
+        let namChiaCho100 = year % 100 == 0;
+        if(namChiaCho100) {
+            let namChiaCho400 = year % 400 == 0;
+            if(namChiaCho400) {
+                lanamnhuan = true;
+            }
+        } else {
+            lanamnhuan=true;
+        }
+    }
+    if(lanamnhuan) {
+        alert(year + "là năm nhuận");
+    } else {
+        alert(year +"ko phải năm nhuận")
+    }
+</script>
+</body>
+</html>
